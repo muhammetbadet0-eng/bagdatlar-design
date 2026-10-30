@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Bağdatlar Design — özel ölçü mobilya, mutfak, yatak odası, banyo ve iç mekân tasarımı.">
+  <meta name="theme-color" content="#f5f1e9">
+  <title>Bağdatlar Design | Özel Tasarım Mobilya</title>
+  <style>
+    :root{--cream:#f5f1e9;--paper:#fffdf9;--ink:#26251f;--muted:#777267;--gold:#a98b60;--line:#e6dfd3;--dark:#292820}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,Helvetica,sans-serif}
+    a{color:inherit;text-decoration:none} img{display:block;width:100%;height:100%;object-fit:cover}
+    .topline{height:4px;background:var(--gold)} header{position:sticky;top:0;z-index:10;background:rgba(255,253,249,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+    .nav{max-width:1200px;margin:auto;padding:18px 24px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{font-family:Georgia,serif;font-size:23px;letter-spacing:2px;font-weight:bold}.brand small{display:block;font:9px Arial,sans-serif;letter-spacing:4px;color:var(--gold);margin-top:5px}
+    nav{display:flex;gap:25px;font-size:12px;letter-spacing:1px;text-transform:uppercase;color:#514d44}nav a:hover{color:var(--gold)}
+    .nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;background:var(--dark);color:white;padding:13px 19px;font-size:11px;letter-spacing:1.3px;text-transform:uppercase;border:1px solid var(--dark);transition:.2s}
+    .nav-cta:hover,.btn:hover{background:var(--gold);border-color:var(--gold)}
+    .hero{min-height:650px;display:grid;grid-template-columns:1fr 1fr;background:var(--cream)}
+    .hero-copy{padding:95px max(40px,calc((100vw - 1200px)/2));padding-right:55px;display:flex;flex-direction:column;justify-content:center;align-items:flex-start}
+    .eyebrow{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-weight:bold}
+    h1{font:normal clamp(42px,5vw,68px)/1.08 Georgia,serif;margin:24px 0 20px;max-width:560px}
+    .hero-copy p{max-width:440px;color:var(--muted);font-size:15px;line-height:1.9;margin:0 0 30px}
+    .hero-image{min-height:560px;position:relative}.hero-image:after{content:"";position:absolute;inset:22px;border:1px solid rgba(255,255,255,.65);pointer-events:none}
+    .hero-image img{object-position:center}
+    .section{max-width:1200px;margin:auto;padding:95px 24px}.section-head{text-align:center;max-width:650px;margin:0 auto 48px}.section-head h2{font:normal clamp(32px,4vw,45px) Georgia,serif;margin:14px 0}.section-head p{color:var(--muted);line-height:1.8;font-size:14px}
+    .services{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.service{background:var(--cream);padding:28px 22px;min-height:190px;border-bottom:2px solid transparent;transition:.2s}.service:hover{border-color:var(--gold);transform:translateY(-3px)}
+    .service .num{font:italic 22px Georgia;color:var(--gold)}.service h3{font:normal 22px Georgia;margin:20px 0 10px}.service p{font-size:13px;line-height:1.7;color:var(--muted);margin:0}
+    .about{background:var(--dark);color:white}.about-inner{max-width:1200px;margin:auto;padding:85px 24px;display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+    .about-photo{height:440px}.about-copy h2{font:normal clamp(34px,4vw,48px) Georgia,serif;margin:18px 0}.about-copy p{color:#c8c2b6;font-size:14px;line-height:1.9}.about-copy .eyebrow{color:#c4a77b}
+    .gallery{display:grid;grid-template-columns:1.2fr 1fr 1fr;grid-template-rows:250px 250px;gap:14px}.gallery figure{margin:0;overflow:hidden;position:relative;background:var(--cream)}.gallery figure:first-child{grid-row:span 2}.gallery img{transition:transform .5s}.gallery figure:hover img{transform:scale(1.04)}.gallery figcaption{position:absolute;bottom:0;left:0;right:0;padding:25px 18px 16px;color:white;font:20px Georgia;background:linear-gradient(transparent,rgba(0,0,0,.65))}
+    .products{background:var(--cream)}.product-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.product{background:var(--paper)}.product-photo{height:260px;overflow:hidden}.product-info{padding:20px}.product-info small{color:var(--gold);letter-spacing:2px;font-size:9px;text-transform:uppercase}.product-info h3{font:normal 23px Georgia;margin:9px 0}.product-info p{color:var(--muted);font-size:13px;line-height:1.6;min-height:42px}.product-info button{width:100%;cursor:pointer}
+    .contact{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}.contact h2{font:normal 42px Georgia;margin:15px 0}.contact p{color:var(--muted);line-height:1.8;font-size:14px}.contact-card{background:var(--cream);padding:35px}.contact-card strong{display:block;font:22px Georgia;margin-bottom:10px}.contact-card span{color:var(--muted);font-size:13px}
+    footer{background:var(--dark);color:white;padding:35px 24px}.footer-inner{max-width:1200px;margin:auto;display:flex;justify-content:space-between;gap:20px;align-items:center}.footer-inner small{color:#c8c2b6;letter-spacing:1px}
+    .wa-float{position:fixed;right:22px;bottom:22px;z-index:20;background:#1e9d60;color:white;border-radius:40px;padding:15px 20px;font-size:12px;font-weight:bold;box-shadow:0 8px 24px #0002}
+    @media(max-width:850px){nav{display:none}.hero{grid-template-columns:1fr}.hero-copy{padding:70px 25px}.hero-image{min-height:360px}.services{grid-template-columns:repeat(2,1fr)}.about-inner,.contact{grid-template-columns:1fr;gap:35px}.about-photo{height:330px}.product-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:560px){.nav{padding:15px 18px}.brand{font-size:19px}.nav-cta{padding:11px 12px;font-size:9px}.hero{min-height:0}.hero-copy{padding:58px 22px}.hero-image{min-height:290px}.section{padding:68px 18px}.services,.product-grid{grid-template-columns:1fr}.gallery{grid-template-columns:1fr 1fr;grid-template-rows:220px 170px 170px}.gallery figure:first-child{grid-row:auto;grid-column:span 2}.product-photo{height:230px}.footer-inner{flex-direction:column;text-align:center}.contact-card{padding:25px}}
+  </style>
+</head>
+<body>
+  <div class="topline"></div>
+  <header>
+    <div class="nav">
+      <a class="brand" href="#anasayfa">BAĞDATLAR DESIGN<small>ÖZEL TASARIM & MOBİLYA</small></a>
+      <nav><a href="#hakkimizda">Hakkımızda</a><a href="#hizmetler">Hizmetler</a><a href="#projeler">Projeler</a><a href="#urunler">Ürünler</a><a href="#iletisim">İletişim</a></nav>
+      <a class="nav-cta" href="#urunler">Koleksiyonu Keşfet</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="anasayfa">
+      <div class="hero-copy">
+        <span class="eyebrow">Bağdatlar Design · Özel Üretim</span>
+        <h1>Yaşam alanınıza özel, zamansız tasarımlar.</h1>
+        <p>Mutfaktan banyoya, yatak odasından özel mobilyalara kadar; ihtiyaçlarınıza ve tarzınıza uygun çözümler tasarlıyor ve üretiyoruz.</p>
+        <a class="btn" href="#projeler">Projelerimizi İnceleyin</a>
+      </div>
+      <div class="hero-image">
+        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1500&q=85" alt="Modern ve doğal tonlarda lüks iç mekân">
+      </div>
+    </section>
+
+    <section class="section" id="hizmetler">
+      <div class="section-head"><span class="eyebrow">Neler Yapıyoruz?</span><h2>Her detayda size özel çözümler</h2><p>İşlevselliği estetikle buluşturarak mekânınıza uygun, özenli ve uzun ömürlü mobilyalar üretiyoruz.</p></div>
+      <div class="services">
+        <article class="service"><span class="num">01</span><h3>Mutfak Tasarımı</h3><p>İhtiyacınıza göre planlanan mutfak dolapları ve kapak seçenekleri.</p></article>
+        <article class="service"><span class="num">02</span><h3>Yatak Odası</h3><p>Gardırop, şifonyer ve tamamlayıcı mobilya çözümleri.</p></article>
+        <article class="service"><span class="num">03</span><h3>Banyo Dolapları</h3><p>Alanınıza uygun ölçü ve tasarımda banyo mobilyaları.</p></article>
+        <article class="service"><span class="num">04</span><h3>Özel Mobilya</h3><p>Kapı, TV ünitesi, vestiyer ve kişiye özel dekorasyon ürünleri.</p></article>
+      </div>
+    </section>
+
+    <section class="about" id="hakkimizda">
+      <div class="about-inner">
+        <div class="about-photo"><img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1100&q=85" alt="Modern mobilya ve iç mekân detayları"></div>
+        <div class="about-copy"><span class="eyebrow">Hakkımızda</span><h2>Hayalinizdeki mekânı birlikte tasarlayalım.</h2><p>Bağdatlar Design olarak mutfak, yatak odası, banyo ve yaşam alanları için özel tasarım mobilya çözümleri sunuyoruz. Her projede ölçü, kullanım alışkanlığı ve estetik beklentileri bir araya getiriyoruz.</p><p>Projenizi konuşmak ve size uygun çözümü belirlemek için bizimle iletişime geçin.</p><a class="btn" href="#iletisim">Bize Ulaşın</a></div>
+      </div>
+    </section>
+
+    <section class="section" id="projeler">
+      <div class="section-head"><span class="eyebrow">Seçili Çalışmalar</span><h2>Projelerimizden ilham alın</h2><p>Bu alandaki örnek görseller geçicidir. Kendi uygulama fotoğraflarınızı gönderdiğinizde gerçek projelerinizle değiştireceğiz.</p></div>
+      <div class="gallery">
+        <figure><img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1000&q=85" alt="Modern mutfak tasarımı"><figcaption>Mutfak Tasarımları</figcaption></figure>
+        <figure><img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=800&q=85" alt="Modern yaşam alanı"><figcaption>Yaşam Alanları</figcaption></figure>
+        <figure><img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=85" alt="Yatak odası tasarımı"><figcaption>Yatak Odaları</figcaption></figure>
+        <figure><img src="https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=800&q=85" alt="Banyo mobilyası"><figcaption>Banyo Mobilyaları</figcaption></figure>
+        <figure><img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=800&q=85" alt="Özel mobilya detayı"><figcaption>Özel Üretim</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="products" id="urunler">
+      <div class="section">
+        <div class="section-head"><span class="eyebrow">Ürün Kataloğu</span><h2>Tarzınızı yansıtan ürünler</h2><p>Ürünleri inceleyin; ölçü, renk ve kişiselleştirme seçenekleri için bize WhatsApp üzerinden ulaşın.</p></div>
+        <div class="product-grid">
+          <article class="product"><div class="product-photo"><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=85" alt="Mutfak dolabı"></div><div class="product-info"><small>BD · MUTFAK</small><h3>Özel Tasarım Mutfak</h3><p>Ölçüye ve kullanım ihtiyacına göre mutfak çözümleri.</p><button class="btn" onclick="orderProduct('Özel Tasarım Mutfak')">WhatsApp'tan Bilgi Al</button></div></article>
+          <article class="product"><div class="product-photo"><img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=900&q=85" alt="TV ünitesi"></div><div class="product-info"><small>BD · SALON</small><h3>TV Ünitesi</h3><p>Mekânınıza uygun ölçü ve malzeme seçenekleri.</p><button class="btn" onclick="orderProduct('TV Ünitesi')">WhatsApp'tan Bilgi Al</button></div></article>
+          <article class="product"><div class="product-photo"><img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=900&q=85" alt="Gardırop ve yatak odası"></div><div class="product-info"><small>BD · YATAK ODASI</small><h3>Gardırop Tasarımı</h3><p>Alanınızı verimli kullanan özel gardırop çözümleri.</p><button class="btn" onclick="orderProduct('Gardırop Tasarımı')">WhatsApp'tan Bilgi Al</button></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="iletisim">
+      <div class="contact">
+        <div><span class="eyebrow">İletişim</span><h2>Projenizi konuşmaya hazırız.</h2><p>Ölçü, model ve fiyat bilgisi almak için bize yazın. İhtiyacınızı birlikte değerlendirelim.</p><a class="btn" href="https://wa.me/905370484093?text=Merhaba%20Ba%C4%9Fdatlar%20Design%2C%20hizmetleriniz%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener">WhatsApp ile İletişime Geç</a></div>
+        <div class="contact-card"><strong>BAĞDATLAR DESIGN</strong><span>Özel Tasarım Mobilya & İç Mekân Çözümleri</span><hr style="border:0;border-top:1px solid #e1d8c9;margin:24px 0"><span>WhatsApp / Telefon</span><p style="font-size:19px;color:#26251f;margin:8px 0 0">+90 537 048 40 93</p></div>
+      </div>
+    </section>
+  </main>
+  <footer><div class="footer-inner"><a class="brand" href="#anasayfa">BAĞDATLAR DESIGN<small>ÖZEL TASARIM & MOBİLYA</small></a><small>© <span id="year"></span> BAĞDATLAR DESIGN · TÜM HAKLARI SAKLIDIR.</small></div></footer>
+  <a class="wa-float" href="https://wa.me/905370484093?text=Merhaba%20Ba%C4%9Fdatlar%20Design" target="_blank" rel="noopener">WhatsApp'tan Yazın</a>
+  <script>
+    function orderProduct(name){
+      const message = `Merhaba Bağdatlar Design, ${name} hakkında bilgi ve fiyat almak istiyorum.`;
+      window.open('https://wa.me/905370484093?text='+encodeURIComponent(message),'_blank','noopener');
+    }
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
